@@ -19,3 +19,22 @@ export type EventItem = {
   speakers: string[];
   tiers: TicketTier[];
 };
+
+export type UserRole = "attendee" | "organizer";
+
+export type UserProfile = {
+  uid: string;
+  username?: string;
+  email: string;
+  role: UserRole;
+};
+
+export type EventFeedItem = {
+  id: string;
+  name: string;
+  banner: string;
+  date: string;
+  location: string;
+  price: number | string;
+  theme?: string;
+};
